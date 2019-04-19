@@ -4,8 +4,8 @@ import com.badlogic.gdx.Gdx;
 
 public class GameParameters
 {
-    public static final int GAME_WIDTH = 1366;
-    public static final int GAME_HEIGHT = 768;
+    public static final int GAME_WIDTH = 800;
+    public static final int GAME_HEIGHT = 600;
     public static final float RADIUS = 0.5f;
     
     public static Coord2D convertPosition(float x, float y)

@@ -3,6 +3,7 @@ package br.com.intergalaticwars.games.screen;
 
 import br.com.intergalaticwars.games.IntergalaticWars;
 import br.com.intergalaticwars.utils.GameParameters;
+import br.com.intergalaticwars.utils.font.Font;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
@@ -49,6 +50,8 @@ public class StartScreen extends IntergalaticWarsScreen
         spriteBatch.setProjectionMatrix(viewMatrix);
         spriteBatch.setTransformMatrix(transformationMatrix);
         
+        Font f = new Font(40);
+        
         spriteBatch.begin();
         spriteBatch.draw(this.background,
                          0, 0,
@@ -56,6 +59,10 @@ public class StartScreen extends IntergalaticWarsScreen
                          0, 0, 
                          GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT,
                          false, false);
+        
+        f.generateText(spriteBatch, "Wars", 400, 300);
+        f.dispose();
+        
         spriteBatch.end();
     }
     
@@ -64,6 +71,7 @@ public class StartScreen extends IntergalaticWarsScreen
     {
         spriteBatch.dispose();
         background.dispose();
+        
     }
     
     public Texture getBackground()
