@@ -1,4 +1,3 @@
-
 package br.com.intergalaticwars.games.screen;
 
 import br.com.intergalaticwars.games.IntergalaticWars;
@@ -49,6 +48,7 @@ public class StartScreen extends IntergalaticWarsScreen
     @Override
     public void draw(float delta)
     {
+        font.font.getData().setScale(0.8f, 0.8f);
         Gdx.gl20.glClear(GL20.GL_COLOR_BUFFER_BIT);
         viewMatrix.setToOrtho2D(0, 0, GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT);
         spriteBatch.setProjectionMatrix(viewMatrix);
@@ -62,6 +62,10 @@ public class StartScreen extends IntergalaticWarsScreen
                          GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT,
                          false, false);
         
+        font.write(spriteBatch, "Brian Andreossi", 450, 550);
+        font.write(spriteBatch, "Lucas Santos", 450, 500);
+        font.write(spriteBatch, "Murilo Dionisio", 450, 450);
+        font.write(spriteBatch, "Touch any button", 250, 300);
         font.write(spriteBatch, "IntergalaticWars | the very start", 25, 50);
         
         spriteBatch.end();

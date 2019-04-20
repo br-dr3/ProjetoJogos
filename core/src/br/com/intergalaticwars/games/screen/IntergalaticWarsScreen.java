@@ -84,10 +84,4 @@ public abstract class IntergalaticWarsScreen implements Screen
     {
         
     }
-    
-    @Override
-    public void dispose()
-    {
-        
-    }
 }

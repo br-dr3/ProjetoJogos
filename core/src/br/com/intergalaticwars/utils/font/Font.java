@@ -7,6 +7,16 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class Font
 {
     public static BitmapFont font;
+
+    public static BitmapFont getFont()
+    {
+        return font;
+    }
+
+    public static void setFont(BitmapFont font)
+    {
+        Font.font = font;
+    }
     
     public Font()
     {
