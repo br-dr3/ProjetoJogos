@@ -6,6 +6,7 @@ import br.com.intergalaticwars.utils.GameParameters;
 import br.com.intergalaticwars.utils.font.Font;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Matrix4;
@@ -16,6 +17,7 @@ public class StartScreen extends IntergalaticWarsScreen
     private SpriteBatch spriteBatch;
     private Matrix4 viewMatrix;
     private Matrix4 transformationMatrix;
+    private Font font;
     
     public StartScreen(IntergalaticWars uw, String id)
     {
@@ -24,6 +26,7 @@ public class StartScreen extends IntergalaticWarsScreen
         this.spriteBatch = new SpriteBatch();
         this.transformationMatrix = new Matrix4();
         this.viewMatrix = new Matrix4();
+        this.font = new Font();
     }
     
     public void setGame(IntergalaticWars uw)
@@ -46,11 +49,10 @@ public class StartScreen extends IntergalaticWarsScreen
     @Override
     public void draw(float delta)
     {
+        Gdx.gl20.glClear(GL20.GL_COLOR_BUFFER_BIT);
         viewMatrix.setToOrtho2D(0, 0, GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT);
         spriteBatch.setProjectionMatrix(viewMatrix);
         spriteBatch.setTransformMatrix(transformationMatrix);
-        
-        Font f = new Font(40);
         
         spriteBatch.begin();
         spriteBatch.draw(this.background,
@@ -60,8 +62,7 @@ public class StartScreen extends IntergalaticWarsScreen
                          GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT,
                          false, false);
         
-        f.generateText(spriteBatch, "Wars", 400, 300);
-        f.dispose();
+        font.write(spriteBatch, "IntergalaticWars | the very start", 25, 50);
         
         spriteBatch.end();
     }
@@ -71,7 +72,7 @@ public class StartScreen extends IntergalaticWarsScreen
     {
         spriteBatch.dispose();
         background.dispose();
-        
+        font.dispose();
     }
     
     public Texture getBackground()

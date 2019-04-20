@@ -5,9 +5,9 @@ import com.badlogic.gdx.Screen;
 
 public abstract class IntergalaticWarsScreen implements Screen
 {
-    String screenId;
-    IntergalaticWars game;
-    boolean done;
+    public String screenId;
+    public IntergalaticWars game;
+    public boolean done;
 
     public IntergalaticWarsScreen(IntergalaticWars uw, String id)
     {
@@ -17,8 +17,6 @@ public abstract class IntergalaticWarsScreen implements Screen
     
     public abstract void update(float delta);
     public abstract void draw(float delta);
-    
-
     
     public void setDone(boolean done)
     {
