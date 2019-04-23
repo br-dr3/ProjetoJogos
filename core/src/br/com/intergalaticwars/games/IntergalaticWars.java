@@ -32,14 +32,19 @@ public class IntergalaticWars extends Game
            currentScreen.dispose();
            
            if(this.getScreenId().equals("Start"))
+           {
                this.setCurrentScreen(new GamePlayScreen(this, "GamePlay"));
+           }
            
            else if(this.getScreenId().equals("GamePlay"))
+           {
                this.setCurrentScreen(new CreditsScreen(this, "Credits"));
+           }
            
            else if(this.getScreenId().equals("Credits"))
+           {
                this.setCurrentScreen(new StartScreen(this, "Start"));
-           
+           }
         }
     }
 

@@ -21,7 +21,7 @@ public class StartScreen extends IntergalaticWarsScreen
     public StartScreen(IntergalaticWars uw, String id)
     {
         super(uw, id);      
-        this.background = new Texture(Gdx.files.internal("StartScreen/StartScreen.jpg"));
+        this.background = new Texture(Gdx.files.internal("Screen/StartScreen/StartScreen.jpg"));
         this.spriteBatch = new SpriteBatch();
         this.transformationMatrix = new Matrix4();
         this.viewMatrix = new Matrix4();
@@ -59,7 +59,7 @@ public class StartScreen extends IntergalaticWarsScreen
                          0, 0,
                          GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT,
                          0, 0, 
-                         GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT,
+                         this.background.getWidth(), this.background.getHeight(),
                          false, false);
         
         font.write(spriteBatch, "Brian Andreossi", 450, 550);

@@ -18,7 +18,7 @@ public class GamePlayScreen extends IntergalaticWarsScreen
     public GamePlayScreen(IntergalaticWars uw, String s)
     {
         super(uw, s);
-        this.background = new Texture(Gdx.files.internal("GamePlayScreen/GamePlayScreen.jpg"));
+        this.background = new Texture(Gdx.files.internal("Screen/GamePlayScreen/GamePlayScreen.jpg"));
         this.spriteBatch = new SpriteBatch();
         this.transformationMatrix = new Matrix4();
         this.viewMatrix = new Matrix4();
@@ -41,7 +41,7 @@ public class GamePlayScreen extends IntergalaticWarsScreen
         spriteBatch.begin();
         spriteBatch.draw(this.background,
                          0, 0,
-                         GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT,
+                         this.background.getWidth(), this.background.getHeight(),
                          0, 0, 
                          GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT,
                          false, false);

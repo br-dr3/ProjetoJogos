@@ -8,6 +8,7 @@ public abstract class IntergalaticWarsScreen implements Screen
     public String screenId;
     public IntergalaticWars game;
     public boolean done;
+    public String intention;
 
     public IntergalaticWarsScreen(IntergalaticWars uw, String id)
     {

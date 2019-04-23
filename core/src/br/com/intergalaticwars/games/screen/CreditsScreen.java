@@ -20,7 +20,7 @@ public class CreditsScreen extends IntergalaticWarsScreen
     public CreditsScreen(IntergalaticWars game, String s)
     {
         super(game, s);
-        this.background = new Texture(Gdx.files.internal("CreditsScreen/CreditsScreen.jpg"));
+        this.background = new Texture(Gdx.files.internal("Screen/CreditsScreen/CreditsScreen.jpg"));
         this.spriteBatch = new SpriteBatch();
         this.transformationMatrix = new Matrix4();
         this.viewMatrix = new Matrix4();
