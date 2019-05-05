@@ -3,6 +3,7 @@ package br.com.intergalaticwars.games.screen;
 import br.com.intergalaticwars.games.IntergalaticWars;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 
 public abstract class IntergalaticWarsScreen implements Screen {
 
@@ -10,10 +11,12 @@ public abstract class IntergalaticWarsScreen implements Screen {
     public IntergalaticWars game;
     public boolean done;
     public String intention;
+    public Music gameMusic;
 
     public IntergalaticWarsScreen(IntergalaticWars uw, String id) {
         this.setGame(uw);
         this.setScreenId(id);
+        gameMusic = Gdx.audio.newMusic(Gdx.files.internal("BitRush.mp3"));
     }
 
     public abstract void update(float delta);

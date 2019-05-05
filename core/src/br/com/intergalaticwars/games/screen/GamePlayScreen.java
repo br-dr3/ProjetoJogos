@@ -26,7 +26,7 @@ public class GamePlayScreen extends IntergalaticWarsScreen {
     private Ball ball;
     private Player user;
     private Player computer;
-    private Vector2 scoreBoard;
+    public Vector2 scoreBoard;
 
     public GamePlayScreen(IntergalaticWars uw, String s) {
         super(uw, s);

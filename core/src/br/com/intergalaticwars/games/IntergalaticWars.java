@@ -29,11 +29,14 @@ public class IntergalaticWars extends Game {
 
             if (this.getScreenId().equals("Start")) {
                 this.setCurrentScreen(new GamePlayScreen(this, "GamePlay"));
-                System.out.println("Teste");
             } else if (this.getScreenId().equals("GamePlay")) {
+                int user = (int) ((GamePlayScreen) currentScreen).scoreBoard.x;
+                int computer = (int)((GamePlayScreen) currentScreen).scoreBoard.y;
+                
                 this.setCurrentScreen(new CreditsScreen(this, "Credits"));
+                ((CreditsScreen) getCurrentScreen()).setIsWinner(user > computer);
             } else if (this.getScreenId().equals("Credits")) {
-                this.setCurrentScreen(new StartScreen(this, "Start"));
+                this.setCurrentScreen(new GamePlayScreen(this, "GamePlay"));
             }
         }
     }
