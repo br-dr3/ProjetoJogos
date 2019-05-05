@@ -1,88 +1,76 @@
 package br.com.intergalaticwars.games.screen;
 
 import br.com.intergalaticwars.games.IntergalaticWars;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 
-public abstract class IntergalaticWarsScreen implements Screen
-{
+public abstract class IntergalaticWarsScreen implements Screen {
+
     public String screenId;
     public IntergalaticWars game;
     public boolean done;
     public String intention;
 
-    public IntergalaticWarsScreen(IntergalaticWars uw, String id)
-    {
+    public IntergalaticWarsScreen(IntergalaticWars uw, String id) {
         this.setGame(uw);
         this.setScreenId(id);
     }
-    
+
     public abstract void update(float delta);
+
     public abstract void draw(float delta);
-    
-    public void setDone(boolean done)
-    {
+
+    public void setDone(boolean done) {
         this.done = done;
     }
-    
-    public IntergalaticWars getGame()
-    {
+
+    public IntergalaticWars getGame() {
         return game;
     }
 
-    public void setGame(IntergalaticWars game)
-    {
+    public void setGame(IntergalaticWars game) {
         this.game = game;
     }
 
-    public String getScreenId()
-    {
+    public String getScreenId() {
         return screenId;
     }
-    
-    public boolean isDone()
-    {
+
+    public boolean isDone() {
         return this.done;
     }
 
-    public void setScreenId(String screenId)
-    {
+    public void setScreenId(String screenId) {
         this.screenId = screenId;
     }
-        
+
     @Override
-    public void render(float f)
-    {
+    public void render(float f) {
         this.update(f);
         this.draw(f);
     }
-    
+
     @Override
-    public void show()
-    {
-        
+    public void show() {
+
     }
-    
+
     @Override
-    public void resize(int i, int i1)
-    {
-        
+    public void resize(int i, int i1) {
     }
-    
+
     @Override
-    public void pause()
-    {
-        
+    public void pause() {
+
     }
-    
+
     @Override
-    public void resume()
-    {
-        
+    public void resume() {
+
     }
-    
+
     @Override
-    public void hide()
-    {
-        
+    public void hide() {
+
     }
 }

@@ -44,9 +44,9 @@ public class CreditsScreen extends IntergalaticWarsScreen
         spriteBatch.begin();
         spriteBatch.draw(this.background,
                          0, 0,
-                         GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT,
+                         (int) GameParameters.GAME_WIDTH, (int) GameParameters.GAME_HEIGHT,
                          0, 0, 
-                         GameParameters.GAME_WIDTH, GameParameters.GAME_HEIGHT,
+                         (int) GameParameters.GAME_WIDTH, (int) GameParameters.GAME_HEIGHT,
                          false, false);
         spriteBatch.end();
     }
